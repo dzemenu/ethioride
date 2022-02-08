@@ -2,7 +2,7 @@ import React, {  useEffect } from 'react';
 import tw from 'tailwind-styled-components'
 import mapboxgl from '!mapbox-gl'
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHplbWVudSIsImEiOiJja3lteHlicHAyY3IyMnZwMGJjczlkcWJvIn0.DptAsDX-6_E2EzBXS5RhXw';
-export  const Map = (props) => {
+  const Map = (props) => {
 
     useEffect(() => {
         // initialize map only once
@@ -37,6 +37,7 @@ export  const Map = (props) => {
         
   return <Wrapper id='map'></Wrapper>;
 };
+export default Map;
 const Wrapper=tw.div`
 flex-1 w-10/12 shadow-2xl h-10/12 m-10  bg-green-200 
 rounded-lg `

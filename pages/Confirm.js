@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
-import { Map } from "./components/Map";
+import  Map  from "./components/Map";
 import { useRouter } from "next/router";
-import { taxiList } from "./data/taxiList";
+
 function Confirm() {
   const [pCorrdinates, setPcorrdinates] = useState([]);
   const [dCorrdinates, setDcorrdinates] = useState([]);
   const [rideDuration, setRideDuration] = useState(0);
   const router = useRouter();
+  const taxiList = [
+    { type:'standard',
+    img:'standard.jpg',
+    basePrice:65},
+    { type:'minivan',
+    img:'minivan.jpg',
+    basePrice:85}, { type:'luxury',
+    img:'luxury.jpg',
+    basePrice:205},
+]
   const { pickup, dropoff } = router.query;
   const pickupCorrdinates = () => {
     const location = pickup;
